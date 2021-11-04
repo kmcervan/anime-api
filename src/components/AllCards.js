@@ -1,10 +1,13 @@
 import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { getAnimeList } from '../actions/index';
+import AnimeCard from './AnimeCard';
 import SearchBar from './SearchBar';
 
-function AllCards() {
+function AllCards(props) {
 
     useEffect(() => {
-        // props.getAnimeList();
+        props.getAnimeList();
     }, []);
 
     if(props.error) {
@@ -21,21 +24,20 @@ function AllCards() {
             <h2 className='h2-animeList'>Top Trending Recommendations</h2>
             <div className='all-cards'>
                 {props.animes.map((animeInfo) => {
-                    // return *** add info here ***
+                    return <AnimeCard key={animeInfo.id} info={animeInfo} />
                 })}
             </div>
         </div>
     )
 };
 
-// const mapStateToProps = state => {
-//     console.log(state);
-//     return {
-//         animes: state.animes,
-//         isFetching: state.isFetching,
-//         error: state.error
-//     };
-// };
+const mapStateToProps = state => {
+    console.log(state);
+    return {
+        animes: state.animes,
+        isFetching: state.isFetching,
+        error: state.error
+    };
+};
 
-// export default connect(mapStateToProps, { getAnimeList }) (AllCards);
-export default AllCards;
+export default connect(mapStateToProps, { getAnimeList })(AllCards);
