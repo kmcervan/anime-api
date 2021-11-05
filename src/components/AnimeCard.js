@@ -1,7 +1,8 @@
 import React from 'react';
 import '../App.css';
 
-function AnimeCard({animeInfo}) {
+function AnimeCard({ animeInfo }) {
+    console.log(animeInfo)
     return (
         <div className='card-container'>
             <div>
