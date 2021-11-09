@@ -24,11 +24,11 @@ function SearchBar(props) {
                 type='text'
                 name='search'
                 value={formValue}
-                className='searchBar'
+                className='search-box'
                 placeholder='Search for an Anime'
                 onChange={handleChange}
                 />
-                <button className='btn' onClick={handleClick}>Search</button>
+                <button className='search-btn' onClick={handleClick}>Search</button>
             </form>
         </div>
     )

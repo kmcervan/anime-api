@@ -5,7 +5,7 @@ function AnimeCard({ animeInfo }) {
     console.log(animeInfo.attributes.coverImage.original)
     return (
         <div className='card-container'>
-            <div>
+            <div className='img-container'>
                 <img className='anime-img' src={animeInfo.attributes.coverImage.original} />
                 <div className='anime-info'>
                     <div className='text'>
