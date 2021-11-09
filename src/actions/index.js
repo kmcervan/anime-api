@@ -16,7 +16,7 @@ export const getAnimeList = () => dispatch => {
     .catch(error => {
         console.log(error);
     })
-}
+};
 
 export const findAnime = (anime) => dispatch => {
     dispatch({ type: FIND_ANIME });

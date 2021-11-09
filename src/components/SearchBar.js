@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
+import { connect } from 'react-redux';
+import { findAnime } from '../actions/index';
+import '../App.css';
 
-function SearchBar() {
+function SearchBar(props) {
 
     const [formValue, setFormValue] = useState('');
 
@@ -8,9 +11,10 @@ function SearchBar() {
         const value = searchValue.target.value;
         setFormValue(value);
     }
+
     const handleClick = (clickValue) => {
         clickValue.preventDefault();
-        // props.findAnime(formValue)
+        props.findAnime(formValue)
     }
 
     return (
@@ -30,14 +34,13 @@ function SearchBar() {
     )
 }
 
-// const mapStateToProps = state => {
-//     console.log(state);
-//     return {
-//         animes: state.animes,
-//         isFetching: state.isFetching,
-//         error: state.error,
-//     }
-// }
+const mapStateToProps = state => {
+    console.log(state);
+    return {
+        animes: state.animes,
+        isFetching: state.isFetching,
+        error: state.error,
+    }
+}
 
-// export default connect(mapStateToProps, { findAnime })(SearchBar);
-export default SearchBar;
+export default connect(mapStateToProps, { findAnime })(SearchBar);
