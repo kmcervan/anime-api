@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { connect } from 'react-redux';
 import { findAnime } from '../actions/index';
+import '../App.css';
 
 function SearchBar(props) {
 

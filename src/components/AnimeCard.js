@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 
 function AnimeCard({ animeInfo }) {
-    console.log(animeInfo)
+    console.log(animeInfo.attributes.coverImage.original)
     return (
         <div className='card-container'>
             <div>

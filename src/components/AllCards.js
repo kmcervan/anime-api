@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getAnimeList } from '../actions/index';
 import AnimeCard from './AnimeCard';
 import SearchBar from './SearchBar';
+import '../App.css';
 
 function AllCards(props) {
 
