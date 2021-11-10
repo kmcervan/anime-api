@@ -21,7 +21,7 @@ export const getAnimeList = () => dispatch => {
 export const findAnime = (anime) => dispatch => {
     dispatch({ type: FIND_ANIME });
     axios
-    .get(`https://kitsu.io/api/edge/anime?filter[text]=${anime}`)
+    .get(`https://kitsu.io/api/edge/anime?filter%5Btext%5D=${anime}`)
     .then((resp) => {
         console.log(resp.data)
         dispatch({ type: FOUND_ANIME, payload: resp.data.data})
