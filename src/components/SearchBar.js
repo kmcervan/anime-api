@@ -7,6 +7,9 @@ function SearchBar(props) {
 
     const [formValue, setFormValue] = useState('');
 
+    const clearState = () => {
+        setFormValue('')
+    }
     const handleChange = (searchValue) => {
         const value = searchValue.target.value;
         setFormValue(value);
@@ -24,11 +27,11 @@ function SearchBar(props) {
                 type='text'
                 name='search'
                 value={formValue}
-                className='search-box'
+                className='search-box search-form'
                 placeholder='Search for an Anime'
                 onChange={handleChange}
                 />
-                <button className='search-btn' onClick={handleClick}>Search</button>
+                <button className='search-btn search-form' onClick={handleClick}>Search</button>
             </form>
         </div>
     )
