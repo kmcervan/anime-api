@@ -4,7 +4,7 @@ User can see trending anime shows and search for anime. Title, populatity rankin
 
 ## Created using
 
-This project was created using React app, axios and redux.
+This project uses the following libraries, React and Axios.
 
 ### `Live Page Link`
 
