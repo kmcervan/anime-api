@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { connect } from 'react-redux';
 import { findAnime } from '../actions/index';
+import AnimeEyes from '../pictures/eyes.png';
 import '../App.css';
 
 function SearchBar(props) {
@@ -21,18 +22,21 @@ function SearchBar(props) {
     }
 
     return (
-        <div>
-            <form className='form'>
-                <input 
-                type='text'
-                name='search'
-                value={formValue}
-                className='search-box search-form'
-                placeholder='Search for an Anime'
-                onChange={handleChange}
-                />
-                <button className='search-btn search-form' onClick={handleClick}>Search</button>
-            </form>
+        <div className='search-box-container'>
+            <div className='search-box-background-img'>
+                {/* <img className='anime-eyes' src={AnimeEyes} /> */}
+                <form className='form'>
+                    <input 
+                    type='text'
+                    name='search'
+                    value={formValue}
+                    className='search-box search-form'
+                    placeholder='Search for an Anime'
+                    onChange={handleChange}
+                    />
+                    <button className='search-btn search-form' onClick={handleClick}>Search</button>
+                </form>
+            </div>
         </div>
     )
 }
