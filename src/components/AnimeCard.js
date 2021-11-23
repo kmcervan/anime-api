@@ -5,20 +5,18 @@ function AnimeCard({ animeInfo }) {
     console.log(animeInfo.attributes.coverImage.original)
     return (
         <div className='card-container'>
-            <div className='img-container'>
-                <img className='anime-img' src={animeInfo.attributes.coverImage.original} />
+            <div className='anime-container'>
+                <img className='anime-img' src={animeInfo.attributes.posterImage.large} />
                 <div className='anime-info'>
-                    <div className='text'>
+                    <div className='anime-text'>
+                        <h2 className='anime-card-h2'>
+                            <a className='anime-card-h2' target='_blank' href={`https://www.youtube.com/watch?v=${animeInfo.attributes.youtubeVideoId}`}>{animeInfo.attributes.canonicalTitle}</a>
+                        </h2>
                         <p>Average Rating: <span>{animeInfo.attributes.averageRating}</span></p>
                         <p>Popularity Rank: <span>{animeInfo.attributes.popularityRank}</span></p>
                         <p>Total Episodes: <span>{animeInfo.attributes.totalLength}</span></p>
                     </div>
                 </div>
-            </div>
-            <div className='h2-container'>
-                <h2 className='anime-h2'>
-                    <a className='youtube-A-Tag' target='_blank' href={`https://www.youtube.com/watch?v=${animeInfo.attributes.youtubeVideoId}`}>{animeInfo.attributes.canonicalTitle}</a>
-                </h2>
             </div>
         </div>
     )
