@@ -46,6 +46,15 @@ body {
   max-width: 800px;
   padding-left: 10px;
 }
+.synopsis {
+  border: hotpink solid 2px;
+  display: block;
+  width: 100%;
+  height: 73px;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+}
 
 /************************** ALL CARDS **************************/
 .all-cards-container {
