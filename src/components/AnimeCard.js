@@ -15,6 +15,8 @@ function AnimeCard({ animeInfo }) {
                         <p>Average Rating: <span>{animeInfo.attributes.averageRating}</span></p>
                         <p>Popularity Rank: <span>{animeInfo.attributes.popularityRank}</span></p>
                         <p>Total Episodes: <span>{animeInfo.attributes.totalLength}</span></p>
+                        <p className='synopsis'>About: <span>{animeInfo.attributes.synopsis}</span></p>
+                        {/* <button> + </button> */}
                     </div>
                 </div>
             </div>
