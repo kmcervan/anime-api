@@ -2,6 +2,9 @@ import React from 'react';
 import '../App.css';
 
 function AnimeCard({ animeInfo }) {
+    const OnClick = () => {
+        
+    }
     return (
         <div className='card-container'>
             <div className='anime-container'>
@@ -14,7 +17,11 @@ function AnimeCard({ animeInfo }) {
                         <p className='card-text'>Rating: <span>{animeInfo.attributes.averageRating}</span></p>
                         <p className='card-text'>Rank: <span>{animeInfo.attributes.popularityRank}</span></p>
                         <p className='card-text'>Total Episodes: <span>{animeInfo.attributes.totalLength}</span></p>
-                        <p ><span className='synopsis'>{animeInfo.attributes.synopsis}</span><button className='card-btn'> ... </button></p>
+                        
+                        <p className='synopsis-p'><span className='synopsis'>{animeInfo.attributes.synopsis}</span></p>
+                        <div className='synopsis-div'>     
+                        <a className='anime-card-h2' target='_blank' href={`https://www.youtube.com/watch?v=${animeInfo.attributes.youtubeVideoId}`}><button target='_blank' className='card-btn'> ... </button></a>
+                        </div>
                     </div>
                 </div>
             </div>
