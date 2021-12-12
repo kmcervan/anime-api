@@ -6,19 +6,15 @@ import SearchBar from './SearchBar';
 import '../App.css';
 
 function AllCards(props) {
-
     useEffect(() => {
         props.getAnimeList();
     }, []);
-
     if(props.error) {
         return <h2>We got an error: {props.error}</h2>
     }
-
     if(props.isFetching) {
         return <h2 className='cards-fetching'>Fetching anime details, believe it!</h2>
     }
-
     return (
         <div className='all-cards-container'>
             <SearchBar props={props} />

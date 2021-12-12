@@ -1,26 +1,18 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { findAnime } from '../actions/index';
-import AnimeEyes from '../pictures/eyes.png';
 import '../App.css';
 
 function SearchBar(props) {
-
     const [formValue, setFormValue] = useState('');
-
-    const clearState = () => {
-        setFormValue('')
-    }
     const handleChange = (searchValue) => {
         const value = searchValue.target.value;
         setFormValue(value);
     }
-
     const handleClick = (clickValue) => {
         clickValue.preventDefault();
         props.findAnime(formValue)
     }
-
     return (
         <div className='search-box-container'>
             <div className='search-box-background-img'>
