@@ -8,4 +8,4 @@ This project uses the following libraries, React and Axios.
 
 ### `Live Page Link`
 
-Link soon to come.
+https://animereplica.herokuapp.com/
