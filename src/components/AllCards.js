@@ -18,7 +18,6 @@ function AllCards(props) {
     return (
         <div className='all-cards-container'>
             <SearchBar props={props} />
-            {/* <h2 className='h2-animeList'>Top Trending Recommendations</h2> */}
             <div className='all-cards'>
                 {props.animes.map((animeInfo) => {
                     return <AnimeCard key={animeInfo.id} animeInfo={animeInfo} />
